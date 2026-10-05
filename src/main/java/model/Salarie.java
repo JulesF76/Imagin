@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-public class Salarie {
+public class Salarie extends Intervenant {
     private LocalDate dtEmbauche;
     private int echelon;
 
@@ -22,7 +22,8 @@ public class Salarie {
         this.echelon = echelon;
     }
 
-    public Salarie(LocalDate dtEmbauche, int echelon) {
+    public Salarie(int id, String nom, String prenom, LocalDate dtEmbauche, int echelon) {
+        super(id, nom, prenom);
         this.dtEmbauche = dtEmbauche;
         this.echelon = echelon;
     }
