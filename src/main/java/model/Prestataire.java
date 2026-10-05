@@ -1,6 +1,6 @@
 package model;
 
-public class Prestataire {
+public class Prestataire extends Intervenant {
     private boolean forfait;
     private double coutJournalier;
     private Societe societe;
@@ -29,7 +29,8 @@ public class Prestataire {
         this.societe = societe;
     }
 
-    public Prestataire(double coutJournalier, boolean forfait, Societe societe) {
+    public Prestataire(int id, String nom, String prenom, double coutJournalier, boolean forfait, Societe societe) {
+        super(id, nom, prenom);
         this.coutJournalier = coutJournalier;
         this.forfait = forfait;
         this.societe = societe;
