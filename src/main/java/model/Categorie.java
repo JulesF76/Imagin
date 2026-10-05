@@ -8,7 +8,7 @@ public class Categorie {
     private String nom;
 
     // Relations
-    private Intervenant responsable;
+    private Intervenant intervenant;
     private List<Affectation> affectations = new ArrayList<>();
 
 
@@ -42,17 +42,17 @@ public class Categorie {
     }
 
     public Intervenant getResponsable() {
-        return responsable;
+        return intervenant;
     }
 
-    public void setResponsable(Intervenant responsable) {
-        this.responsable = responsable;
+    public void setResponsable(Intervenant intervenant) {
+        this.intervenant = intervenant;
     }
 
-    public Categorie(int id, String nom, Intervenant responsable, List<Affectation> affectations) {
+    public Categorie(int id, String nom, Intervenant intervenant, List<Affectation> affectations) {
         this.id = id;
         this.nom = nom;
-        this.responsable = responsable;
+        this.intervenant = intervenant;
         this.affectations = affectations;
     }
 }
