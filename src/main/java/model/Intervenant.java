@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intervenant {
+public abstract class Intervenant {
     private int id;
     private String nom;
     private String prenom;
