@@ -9,8 +9,24 @@ public class Intervenant {
     private String prenom;
 
     // Relations
+    private Categorie categorie;
     private List<Affectation> affectations = new ArrayList<>();
-    private List<Projet> projets = new ArrayList<>();
+    private List<Projet> projetsResponsables = new ArrayList<>();
+
+    public Intervenant(int id, String nom, String prenom) {
+        this.id = id; // Ajouté
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    public Intervenant(int id, String nom, String prenom, Categorie categorie, List<Affectation> affectations, List<Projet> projetsResponsables) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.categorie = categorie;
+        this.affectations = affectations;
+        this.projetsResponsables = projetsResponsables;
+    }
 
     public int getId() {
         return id;
@@ -18,14 +34,6 @@ public class Intervenant {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
     }
 
     public String getNom() {
@@ -36,9 +44,21 @@ public class Intervenant {
         this.nom = nom;
     }
 
-    public Intervenant(int id, String nom, String prenom) {
-        this.nom = nom;
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    // Getters / Setters Categorie (Ajoutés)
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 
     public List<Affectation> getAffectations() {
@@ -49,19 +69,11 @@ public class Intervenant {
         this.affectations = affectations;
     }
 
-    public List<Projet> getProjets() {
-        return projets;
+    public List<Projet> getProjetsResponsables() {
+        return projetsResponsables;
     }
 
-    public void setProjets(List<Projet> projets) {
-        this.projets = projets;
-    }
-
-    public Intervenant(int id, String nom, String prenom, List<Affectation> affectations, List<Projet> projets) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.affectations = affectations;
-        this.projets = projets;
+    public void setProjetsResponsables(List<Projet> projets) {
+        this.projetsResponsables = projets; // Corrigé
     }
 }

@@ -21,8 +21,8 @@ public class Affectation {
         return semaine;
     }
 
-    public void setSemaine(int semain) {
-        this.semaine = semain;
+    public void setSemaine(int semaine) {
+        this.semaine = semaine;
     }
 
     public int getTempsPasse() {
