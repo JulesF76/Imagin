@@ -27,4 +27,11 @@ public class Salarie extends Intervenant {
         this.dtEmbauche = dtEmbauche;
         this.echelon = echelon;
     }
+
+    private static final double COUT_FIXE = 550.0;
+
+    @Override
+    public double calculCoutProjet(int nbJours) {
+        return nbJours * COUT_FIXE;
+    }
 }

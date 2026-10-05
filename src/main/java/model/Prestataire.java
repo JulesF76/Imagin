@@ -35,4 +35,9 @@ public class Prestataire extends Intervenant {
         this.forfait = forfait;
         this.societe = societe;
     }
+
+    @Override
+    public double calculCoutProjet(int nbJours) {
+        return nbJours * this.coutJournalier;
+    }
 }
