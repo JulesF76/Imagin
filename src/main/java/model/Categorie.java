@@ -48,4 +48,11 @@ public class Categorie {
     public void setResponsable(Intervenant responsable) {
         this.responsable = responsable;
     }
+
+    public Categorie(int id, String nom, Intervenant responsable, List<Affectation> affectations) {
+        this.id = id;
+        this.nom = nom;
+        this.responsable = responsable;
+        this.affectations = affectations;
+    }
 }

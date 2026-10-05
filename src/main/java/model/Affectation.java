@@ -54,4 +54,12 @@ public class Affectation {
     public void setProjet(Projet projet) {
         this.projet = projet;
     }
+
+    public Affectation(int annee, int semaine, int tempsPasse, Intervenant intervenant, Projet projet) {
+        this.annee = annee;
+        this.semaine = semaine;
+        this.tempsPasse = tempsPasse;
+        this.intervenant = intervenant;
+        this.projet = projet;
+    }
 }
