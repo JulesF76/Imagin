@@ -5,6 +5,10 @@ public class Affectation {
     private int semaine;
     private int tempsPasse;
 
+    // Relations
+    private Intervenant intervenant;
+    private Projet projet;
+
     public int getAnnee() {
         return annee;
     }
@@ -33,5 +37,21 @@ public class Affectation {
         this.annee = annee;
         this.semaine = semaine;
         this.tempsPasse = tempsPasse;
+    }
+
+    public Intervenant getIntervenant() {
+        return intervenant;
+    }
+
+    public void setIntervenant(Intervenant intervenant) {
+        this.intervenant = intervenant;
+    }
+
+    public Projet getProjet() {
+        return projet;
+    }
+
+    public void setProjet(Projet projet) {
+        this.projet = projet;
     }
 }
