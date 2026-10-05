@@ -1,10 +1,17 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Projet {
     private int id;
     private String nom;
     private double budgetPrevu;
     private int nbJoursHPrevu;
+
+    // Relations
+    private Intervenant responsable;
+    private List<Affectation> affectations = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -43,5 +50,30 @@ public class Projet {
         this.nom = nom;
         this.budgetPrevu = budgetPrevu;
         this.nbJoursHPrevu = nbJoursHPrevu;
+    }
+
+    public Intervenant getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(Intervenant responsable) {
+        this.responsable = responsable;
+    }
+
+    public List<Affectation> getAffectations() {
+        return affectations;
+    }
+
+    public void setAffectations(List<Affectation> affectations) {
+        this.affectations = affectations;
+    }
+
+    public Projet(int id, String nom, double budgetPrevu, int nbJoursHPrevu, Intervenant responsable, List<Affectation> affectations) {
+        this.id = id;
+        this.nom = nom;
+        this.budgetPrevu = budgetPrevu;
+        this.nbJoursHPrevu = nbJoursHPrevu;
+        this.responsable = responsable;
+        this.affectations = affectations;
     }
 }
