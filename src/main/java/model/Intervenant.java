@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intervenant {
+public abstract class Intervenant {
     private int id;
     private String nom;
     private String prenom;
@@ -14,7 +14,7 @@ public class Intervenant {
     private List<Projet> projetsResponsables = new ArrayList<>();
 
     public Intervenant(int id, String nom, String prenom) {
-        this.id = id; // Ajouté
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
     }
@@ -76,4 +76,6 @@ public class Intervenant {
     public void setProjetsResponsables(List<Projet> projets) {
         this.projetsResponsables = projets; // Corrigé
     }
+
+    public abstract double calculCoutProjet(int nbJours);
 }
